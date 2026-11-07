@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prompt-dedup"
+version = "0.1.0"
+description = "Find near-duplicate prompts with MinHash and LSH."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "khawajasafiullah18" }]
+dependencies = []
+keywords = ["prompts", "deduplication", "minhash", "lsh", "nlp"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Topic :: Software Development :: Quality Assurance",
+  "Environment :: Console",
+]
+
+[project.urls]
+Homepage = "https://github.com/aiplusplus360/prompt-dedup"
+
+[project.scripts]
+prompt-dedup = "promptdedup.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["promptdedup*"]
